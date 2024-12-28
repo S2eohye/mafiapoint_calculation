@@ -34,7 +34,6 @@ class GuildMember:
                 while self.guild_rank_count >= threshold:  # 길랭 횟수가 조건을 만족한다면
                     adjusted_min_activity_points -= deduction  # 활동포인트에서 차감
                     self.guild_rank_count -= threshold  # 차감 후 길랭 횟수도 차감
-                    # 만약 더 이상 차감 조건을 만족하지 않으면 종료
                     if self.guild_rank_count < threshold:
                         break  # 더 이상 조건을 만족하지 않으면 종료
 
@@ -84,7 +83,6 @@ def main():
     
     st.sidebar.markdown(
     """
-    <br><br>
     <div style="text-align: right; font-size: small;">
         <b>by 쵸우</b>
     </div>

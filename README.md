@@ -1,1 +1,0 @@
-# mafiapoint_calculation

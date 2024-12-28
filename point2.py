@@ -43,12 +43,12 @@ class GuildMember:
         #if adjusted_min_activity_points < 0:
             #adjusted_min_activity_points = 0
 
-        #st.write(f"최소 활동포인트 조건: {adjusted_min_activity_points}")
-        #st.write(f"최소 명성 조건: {adjusted_min_fame}")
+        st.write(f"최소 활동포인트 조건: {adjusted_min_activity_points}")
+        st.write(f"최소 명성 조건: {adjusted_min_fame}")
     
         # 조건 충족 여부 반환
         # 최종적으로 갱신된 `guild_rank_count`가 반영될 수 있도록 처리
-        #st.write(f"최종 길랭 횟수: {self.guild_rank_count}")  # 업데이트된 길랭 횟수를 확인
+        st.write(f"최종 길랭 횟수: {self.guild_rank_count}")  # 업데이트된 길랭 횟수를 확인
         return self.fame >= adjusted_min_fame and self.activity_points >= adjusted_min_activity_points
 
 

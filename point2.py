@@ -85,6 +85,8 @@ def main():
     st.sidebar.markdown(
     """
     <div style="text-align: right; font-size: small;">
+
+
         <b>by 쵸우</b>
     </div>
     """,

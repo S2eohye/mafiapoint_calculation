@@ -24,8 +24,8 @@ class GuildMember:
         else:
             activity_bonus = 0
 
-        #adjusted_min_activity_points = max(0, base_activity_points - fame_bonus)
-        #adjusted_min_fame = max(0, base_fame - activity_bonus)
+        adjusted_min_activity_points = max(0, base_activity_points - fame_bonus)
+        adjusted_min_fame = max(0, base_fame - activity_bonus)
 
         # 길랭 차감 계산
         if guild_rank_deductions:  # 길랭 차감 조건이 있을 경우

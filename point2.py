@@ -82,7 +82,13 @@ def main():
             deduction_amount = st.sidebar.number_input(f"{i + 1} 조건 활포 차감액", min_value=0, value=10000, step=1000, key=f"deduction_{i}")
             guild_rank_deductions.append((num_wars, deduction_amount))
     
-    st.sidebar.header("              by 쵸우")
+    st.sidebar.markdown(
+    """
+    <div style="text-align: right; font-size: small;">
+        <b>by 쵸우</b>
+    </div>
+    """,
+    unsafe_allow_html=True)
 
     # 명성, 활동포인트 입력
     st.header("명성 입력")
@@ -145,7 +151,7 @@ def main():
 
     # 결과 확인
     if st.button("결과 확인"):
-        st.subheader("길드 조건 결과")
+        st.subheader("길드 조건 확인")
         missing_data = []
         for name, member in sorted(members.items()):
             missing_info = []

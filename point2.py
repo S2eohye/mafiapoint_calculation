@@ -38,10 +38,10 @@ class GuildMember:
                         break  # 더 이상 조건을 만족하지 않으면 종료
 
         # 최종 조건 확인: 변한 명성과 활동포인트의 조건을 확인함
-        if adjusted_min_fame < 0:
-            adjusted_min_fame = 0
-        if adjusted_min_activity_points < 0:
-            adjusted_min_activity_points = 0
+        #if adjusted_min_fame < 0:
+            #adjusted_min_fame = 0
+        #if adjusted_min_activity_points < 0:
+            #adjusted_min_activity_points = 0
 
         #st.write(f"최소 활동포인트 조건: {adjusted_min_activity_points}")
         #st.write(f"최소 명성 조건: {adjusted_min_fame}")
@@ -94,6 +94,7 @@ def main():
     fame_input = st.text_area('''
     닉네임, 명성 (줄바꿈으로 구분)
     -필수 입력, 명성0은 입력 불가능합니다. 정확한 닉네임을 입력해주세요
+    -0과 0보다 작은 값은 입력이 불가능합니다.
     ''')
     
 
@@ -101,6 +102,7 @@ def main():
     activity_input = st.text_area('''
     닉네임, 활동포인트 (줄바꿈으로 구분)
     -필수 입력, 활동포인트0은 입력 불가능합니다. 정확한 닉네임을 입력해주세요
+    -0과 0보다 작은 값은 입력이 불가능합니다.
     ''')
 
     st.header("길랭 횟수 입력")

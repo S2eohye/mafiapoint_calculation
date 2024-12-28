@@ -24,8 +24,8 @@ class GuildMember:
         else:
             activity_bonus = 0
 
-        adjusted_min_activity_points = max(0, base_activity_points - fame_bonus)
-        adjusted_min_fame = max(0, base_fame - activity_bonus)
+        #adjusted_min_activity_points = max(0, base_activity_points - fame_bonus)
+        #adjusted_min_fame = max(0, base_fame - activity_bonus)
 
         # 길랭 차감 계산
         if guild_rank_deductions:  # 길랭 차감 조건이 있을 경우
@@ -38,10 +38,6 @@ class GuildMember:
                         break  # 더 이상 조건을 만족하지 않으면 종료
 
         # 최종 조건 확인: 변한 명성과 활동포인트의 조건을 확인함
-        #if adjusted_min_fame < 0:
-            #adjusted_min_fame = 0
-        #if adjusted_min_activity_points < 0:
-            #adjusted_min_activity_points = 0
 
         st.write(f"최소 활동포인트 조건: {adjusted_min_activity_points}")
         st.write(f"최소 명성 조건: {adjusted_min_fame}")

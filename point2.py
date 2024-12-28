@@ -81,6 +81,7 @@ def main():
             num_wars = st.sidebar.number_input(f"{i + 1} 조건 길랭 회차 수", min_value=1, value=3, step=1, key=f"war_count_{i}")
             deduction_amount = st.sidebar.number_input(f"{i + 1} 조건 활포 차감액", min_value=0, value=10000, step=1000, key=f"deduction_{i}")
             guild_rank_deductions.append((num_wars, deduction_amount))
+    st.sidebar.header("It's made by '쵸우'")
 
     # 명성, 활동포인트 입력
     st.header("명성 입력")

@@ -169,9 +169,9 @@ def main():
                     activity_bonus_step, activity_bonus_reduce,
                     guild_rank_deductions
                 ):
-                    st.write(f"✅ {name} - 충족")
+                    st.write(f"🟢 {name} - 충족")
                 else:
-                    st.write(f"❌ {name} - 미충족")
+                    st.write(f"🔴 {name} - 미충족")
 
         # 누락 데이터 경고 메시지 출력
         if missing_data:

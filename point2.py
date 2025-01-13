@@ -39,8 +39,8 @@ class GuildMember:
 
         # 최종 조건 확인: 변한 명성과 활동포인트의 조건을 확인함
 
-        st.write(f"최소 활동포인트 조건: {adjusted_min_activity_points}")
-        st.write(f"최소 명성 조건: {adjusted_min_fame}")
+        #st.write(f"최소 활동포인트 조건: {adjusted_min_activity_points}")
+        #st.write(f"최소 명성 조건: {adjusted_min_fame}")
     
         # 조건 충족 여부 반환
         # 최종적으로 갱신된 `guild_rank_count`가 반영될 수 있도록 처리
@@ -172,6 +172,7 @@ def main():
                     st.write(f"🟢 {name} - 충족")
                 else:
                     st.write(f"🔴 {name} - 미충족")
+                    st.write(f"members[name].fame, members[name].fame")
 
         # 누락 데이터 경고 메시지 출력
         if missing_data:
